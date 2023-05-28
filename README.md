@@ -1,6 +1,6 @@
 # 🔒 ChatGPT Shroud 🌫️
 
-* [ ] Hello and welcome to the README for **ChatGPT Shroud** ! This friendly little Chrome extension allows you to hide and unhide your chat history on OpenAI's ChatGPT website with ease. 👋
+Hello and welcome to the README for **ChatGPT Shroud** ! This friendly little Chrome extension allows you to hide and unhide your chat history on OpenAI's ChatGPT website with ease. 👋
 
 <img src="./assets/hidden-chat.png" height="300">
 
