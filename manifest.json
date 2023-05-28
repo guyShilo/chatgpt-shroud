@@ -3,7 +3,8 @@
   "name": "ChatGPT Shroud",
   "description": "This extension will hide the chat history on chat.openai.com",
   "version": "1.0",
-  "permissions": ["activeTab"],
+  "permissions": ["tabs"],
+  "host_permissions": ["*://*.openai.com/*"],
   "content_scripts": [
     {
       "matches": ["https://chat.openai.com/*"],

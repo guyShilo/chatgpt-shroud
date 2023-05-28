@@ -1,15 +1,15 @@
-document.getElementById("hideButton").addEventListener("click", function () {
+const executeCommandOnQuery = (command) => {
   chrome.tabs.query({ url: "*://chat.openai.com/*" }, function (tabs) {
     for (let i = 0; i < tabs.length; i++) {
-      chrome.tabs.sendMessage(tabs[i].id, { command: "hideChat" });
+      chrome.tabs.sendMessage(tabs[i].id, { command });
     }
   });
-});
+};
 
-document.getElementById("unhideButton").addEventListener("click", function () {
-  chrome.tabs.query({ url: "*://chat.openai.com/*" }, function (tabs) {
-    for (let i = 0; i < tabs.length; i++) {
-      chrome.tabs.sendMessage(tabs[i].id, { command: "unhideChat" });
-    }
-  });
-});
+document
+  .getElementById("hideButton")
+  .addEventListener("click", () => executeCommandOnQuery("hideChat"));
+
+document
+  .getElementById("unhideButton")
+  .addEventListener("click", () => executeCommandOnQuery("unhideChat"));

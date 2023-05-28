@@ -1,17 +1,19 @@
 # 🔒 ChatGPT Shroud 🌫️
 
-Hello and welcome to the README for **ChatGPT Shroud** ! This friendly little Chrome extension allows you to hide and unhide your chat history on OpenAI's ChatGPT website with ease. 👋
+* [ ] Hello and welcome to the README for **ChatGPT Shroud** ! This friendly little Chrome extension allows you to hide and unhide your chat history on OpenAI's ChatGPT website with ease. 👋
+
+<img src="./assets/hidden-chat.png" height="300">
 
 ## 📝 Description
 
-**ChatGPT Shroud** is inspired by privacy and simplicity. It's a small but powerful tool for those of us who want a little extra control over our chat history visibility.
-
-Whether you are demonstrating the wonders of GPT-3 to a friend, presenting a work project, or just prefer to keep things tidy, **ChatGPT Shroud** is your go-to tool. It adds a layer of privacy to your AI conversations by enabling you to hide or unhide your chat history with just one click.
+**ChatGPT Shroud** is an extension built by GPT-4 for OpenAI's ChatGPT browser client, focusing on privacy and simplicity. It's a small but powerful tool that adds a layer of privacy to your AI conversations, enabling you to hide or unhide your chat history with just a click.
 
 ## ⭐ Features
 
 * 💼 Easy to use: Just two buttons! Click "🙈 Hide" to blur your chat history, and "🙉 Unhide" to bring it back.
 * 🔒 Privacy-focused: Your chats are only hidden on your local machine - no data is ever collected or stored.
+* 🔐 Built by GPT-4: Specifically designed for OpenAI's ChatGPT browser client.
+* 📡 Offline Operation: Runs entirely in the browser and does not send data anywhere.
 
 ## 💾 Installation
 
