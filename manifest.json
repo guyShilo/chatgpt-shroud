@@ -5,6 +5,9 @@
   "version": "1.0",
   "permissions": ["tabs"],
   "host_permissions": ["*://*.openai.com/*"],
+  "icons": {
+    "128": "./assets/safe.png"
+  },
   "content_scripts": [
     {
       "matches": ["https://chat.openai.com/*"],

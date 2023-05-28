@@ -1,6 +1,15 @@
 const CLASS_NAME = ".flex.flex-col.gap-2.pb-2.text-gray-100.text-sm";
 const GPT_SHROUD_CLASS_NAME = "GPT_SHROUD";
 
+const createElement = (type, className, styles = {}) => {
+  const element = document.createElement(type);
+  element.className = className;
+  applyStyles(element, styles);
+  return element;
+};
+
+const applyStyles = (element, styles) => Object.assign(element.style, styles);
+
 const hideElements = () => {
   // Select the elements using its classes
   const elements = document.querySelectorAll(CLASS_NAME);
@@ -16,24 +25,29 @@ const hideElements = () => {
   const getBadged = document.getElementsByClassName(parentClassName);
 
   if (!getBadged.length) {
-    const badgeParent = document.createElement("div");
-    badgeParent.className = parentClassName;
-    badgeParent.style.position = "absolute";
-    badgeParent.style.transform = "translate(-50%, -50%)";
-    badgeParent.style.top = "45%";
-    badgeParent.style.left = "45%";
-    badgeParent.style.width = "100%";
+    // Add the badge
+    const badgeParent = createElement(
+      "div",
+      `${GPT_SHROUD_CLASS_NAME}_PARENT`,
+      {
+        position: "absolute",
+        transform: "translate(-50%, -50%)",
+        top: "45%",
+        left: "45%",
+        width: "100%",
+      }
+    );
 
-    const badge = document.createElement("div");
-    badge.className = GPT_SHROUD_CLASS_NAME;
+    const badge = createElement("div", GPT_SHROUD_CLASS_NAME, {
+      position: "absolute",
+      top: "0",
+      right: "0",
+      padding: "5px",
+      borderRadius: "3px",
+      fontWeight: "bold",
+    });
+
     badge.innerHTML = "Hidden by ChatGPT Shroud 🛡️";
-    badge.style.position = "absolute";
-    badge.style.top = "0";
-    badge.style.right = "0";
-    badge.style.padding = "5px";
-    badge.style.borderRadius = "3px";
-    badge.style.fontWeight = "bold";
-
     badgeParent.appendChild(badge);
 
     const chatHistory = document.querySelector('[aria-label="Chat history"]');
