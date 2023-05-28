@@ -79,7 +79,7 @@ const unhideElements = () => {
 };
 
 // Start observing the document with the configured parameters
-const observer = new MutationObserver((mutationsList, observer) => {
+const observer = new MutationObserver((mutationsList) => {
   for (let mutation of mutationsList) {
     // If the addedNodes property has one or more nodes
     if (mutation.addedNodes.length) {
@@ -89,7 +89,7 @@ const observer = new MutationObserver((mutationsList, observer) => {
 });
 
 // Call the function to hide the element
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+chrome.runtime.onMessage.addListener((request) => {
   if (request.command == "hideChat") {
     hideElements();
     observer.observe(document.body, { childList: true, subtree: true });

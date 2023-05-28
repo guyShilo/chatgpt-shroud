@@ -6,10 +6,11 @@ const executeCommandOnQuery = (command) => {
   });
 };
 
-document
-  .getElementById("hideButton")
-  .addEventListener("click", () => executeCommandOnQuery("hideChat"));
+const addListener = (id, command) => {
+  document
+    .getElementById(id)
+    .addEventListener("click", () => executeCommandOnQuery(command));
+};
 
-document
-  .getElementById("unhideButton")
-  .addEventListener("click", () => executeCommandOnQuery("unhideChat"));
+addListener("hideButton", "hideChat");
+addListener("unhideButton", "unhideChat");
